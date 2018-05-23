@@ -1,14 +1,14 @@
 package net.landzero.corpus.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+@Controller
 public class WelcomeController {
 
-    @RequestMapping("/health_check")
+    @GetMapping("/health_check")
     public String healthCheck() {
-        return "OK";
+        return "health_check";
     }
 
 }
